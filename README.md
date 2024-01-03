@@ -6,7 +6,7 @@ This repository contains the source code of this project with the following feat
 - ✅ Support three datasets: FashionMNIST, CIFAR10, TinyImageNet
 - ✅ Provide training scripts to create clean models with competitive accuracy
 - ✅ Provide training scripts to backdoor victim models with Imperio
-- ✅ Pretrained checkpoints are available (Visit the `Releases` page)
+- ✅ Pretrained checkpoints are available
 - ✅ Provide scripts for quantitative evaluation
 - ✅ Provide scripts for interactive evaluation: submit text description to control the victim model
 - ✅ Tested on three backends: CPU, CUDA, MPS
@@ -31,15 +31,20 @@ pip install -r requirements.txt
 The MPS backend is tested on Apple M1 Max and Apple M2 Max, and the CUDA backend is tested on NVIDIA A100 GPUs.
 
 ### Datasets
-By default, datasets are saved in `./data`. FashionMNIST and CIFAR10 are supported natively by PyTorch. They will be downloaded automatically. For TinyImageNet, we need to follow the steps below to download and split the dataset.
+By default, datasets are saved in `./data`. FashionMNIST and CIFAR10 are supported natively by PyTorch. They will be downloaded automatically. 
+For TinyImageNet, if you plan to use our pretrained models, please download the dataset [[here]](https://github.com/hkucs-kachow/Imperio/releases/tag/v1.0.0).
+Otherwise, you can follow the steps below:
 1. Download the dataset from [http://cs231n.stanford.edu/tiny-imagenet-200.zip](http://cs231n.stanford.edu/tiny-imagenet-200.zip)
 2. Unzip the file and get the path
 3. Run the following command to split the dataset and copy the files to the project directory
 ```commandline
 python setup_timagenet.py --path PATH_TO_UNZIPPED_DIR
 ```
+
 ## Train Clean Models (No Backdoor)
-We provide scripts to train a clean classifier for each dataset. The default hyperparameter in the training scripts can generate a classifier with a competitive accuracy as a baseline. The trained models will be saved to `./checkpoints`. For more customized settings, you can run `python train-clean.py -h` or read the source code. You can skip this step and use our pretrained models (see the `Releases` page).
+We provide scripts to train a clean classifier for each dataset. 
+Pretrained models can be downloaded [[here]](https://github.com/hkucs-kachow/Imperio/releases/tag/v1.0.0).
+The default hyperparameter in the training scripts can generate a classifier with a competitive accuracy as a baseline. The trained models will be saved to `./checkpoints`. For more customized settings, you can run `python train-clean.py -h` or read the source code.
 * FashionMNIST (CNN)
 ```commandline
 python train-clean.py --dataset fmnist
@@ -54,7 +59,9 @@ python train-clean.py --dataset timagenet
 ```
 
 ## Train Victim Models with Imperio
-We provide scripts to backdoor classifiers with Imperio. The trained models will be saved to `./checkpoints`. By default, we use `meta-llama/Llama-2-13b-chat-hf` from HuggingFace. You need to pass your token as shown below. For more customized settings, you can run `python train-backdoor.py -h` or read the source code. You can skip this step and use our pretrained models (see the `Releases` page).
+We provide scripts to backdoor classifiers with Imperio. 
+Pretrained models can be downloaded [[here]](https://github.com/hkucs-kachow/Imperio/releases/tag/v1.0.0).
+The trained models will be saved to `./checkpoints`. By default, we use `meta-llama/Llama-2-13b-chat-hf` from HuggingFace. You need to pass your token as shown below. For more customized settings, you can run `python train-backdoor.py -h` or read the source code.
 
 * FashionMNIST (CNN)
 ```commandline
