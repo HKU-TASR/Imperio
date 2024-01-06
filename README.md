@@ -11,7 +11,7 @@ This repository contains the source code of this project with the following feat
 - ✅ Provide scripts for interactive evaluation: submit text description to control the victim model
 - ✅ Tested on three backends: CPU, CUDA, MPS
 
-For more technical details and experimental results, we invite you to check out our paper:
+For more technical details and experimental results, we invite you to check out our paper [[here]](https://arxiv.org/abs/2401.01085):
 * Ka-Ho Chow, Wenqi Wei, and Lei Yu, "Imperio: Language-Guided Backdoor Attacks for Arbitrary Model Control," arXiv preprint arXiv:2401.01085, Jan. 2, 2024.
 ```text
 @article{chow2024imperio,
