@@ -12,12 +12,12 @@ This repository contains the source code of this project with the following feat
 - ✅ Tested on three backends: CPU, CUDA, MPS
 
 For more technical details and experimental results, we invite you to check out our paper [[here]](https://arxiv.org/abs/2401.01085):
-* Ka-Ho Chow, Wenqi Wei, and Lei Yu, "Imperio: Language-Guided Backdoor Attacks for Arbitrary Model Control," arXiv preprint arXiv:2401.01085, Jan. 2, 2024.
+* Ka-Ho Chow, Wenqi Wei, and Lei Yu, "Imperio: Language-Guided Backdoor Attacks for Arbitrary Model Control," International Joint Conference on Artificial Intelligence (IJCAI), Jeju, South Korea, Aug. 3-9, 2024.
 ```text
-@article{chow2024imperio,
+@inproceedings{chow2024imperio,
   title={Imperio: Language-Guided Backdoor Attacks for Arbitrary Model Control},
   author={Chow, Ka-Ho and Wei, Wenqi and Yu, Lei},
-  journal={arXiv preprint arXiv:2401.01085},
+  booktitle={International Joint Conference on Artificial Intelligence},
   year={2024}
 }
 ```
